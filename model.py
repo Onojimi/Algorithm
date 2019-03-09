@@ -2,6 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+#这里的模型并没怎么改，只是单纯把最后的全连接层拿掉了而已
+#参考的是https://github.com/Shawn1993/cnn-text-classification-pytorch/blob/master/model.py这个老哥的模型
+#按理说从embedding层出来的应该是形状：10×5的矩阵
 class textCNN(nn.Module):
     def __init__(self,args):
         super(textCNN,self).__init__()
